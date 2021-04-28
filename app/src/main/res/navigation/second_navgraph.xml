@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/second_navgraph"
+    app:startDestination="@id/rvDevicesFragment">
+
+    <fragment
+        android:id="@+id/rvDevicesFragment"
+        android:name="com.nicomahnic.dadm.clase4.fragments.secondActivityFragments.RVDevicesFragment"
+        android:label="fragment_device_rv"
+        tools:layout="@layout/fragment_rv_devices">
+        <action
+            android:id="@+id/action_rvDevicesFragment_to_deviceDetailsFragment2"
+            app:destination="@id/deviceDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deviceDetailsFragment"
+        android:name="com.nicomahnic.dadm.clase4.fragments.secondActivityFragments.DeviceDetailsFragment"
+        android:label="fragment_device_details"
+        tools:layout="@layout/fragment_device_details" >
+        <argument android:name="deviceName"
+            app:argType="string" />
+        <argument android:name="description"
+            app:argType="string" />
+    </fragment>
+</navigation>
