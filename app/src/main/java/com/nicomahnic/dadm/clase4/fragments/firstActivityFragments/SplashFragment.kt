@@ -12,7 +12,7 @@ import com.nicomahnic.dadm.clase4.databinding.FragmentSplashBinding
 class SplashFragment : Fragment(R.layout.fragment_splash) {
 
     private lateinit var binding: FragmentSplashBinding
-    private val SPLASH_TIME_OUT:Long = 3000 // 3 sec
+    private val SPLASH_TIME_OUT:Long = 2000 // 3 sec
 
     lateinit var v: View
 

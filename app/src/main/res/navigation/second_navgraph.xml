@@ -41,4 +41,9 @@
             android:name="description"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/registerDevicesFragment"
+        android:name="com.nicomahnic.dadm.clase4.fragments.secondActivityFragments.registerDevicesFragment"
+        android:label="fragment_add_devices"
+        tools:layout="@layout/fragment_register_devices" />
 </navigation>

@@ -11,6 +11,7 @@ import com.nicomahnic.dadm.clase4.entities.User
 import com.nicomahnic.dadm.clase4.R
 import com.nicomahnic.dadm.clase4.activities.SecondActivity
 import com.nicomahnic.dadm.clase4.databinding.FragmentLoginBinding
+import kotlinx.android.synthetic.main.fragment_login.*
 
 
 /**

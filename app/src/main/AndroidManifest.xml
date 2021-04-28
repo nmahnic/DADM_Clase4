@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Clase4">
         <activity android:name=".activities.SecondActivity"></activity>
-        <activity android:name=".activities.MainActivity">
+        <activity
+            android:name=".activities.MainActivity"
+            android:theme="@style/Theme.Clase4">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
