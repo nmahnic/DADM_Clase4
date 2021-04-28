@@ -52,7 +52,7 @@ class RVDevicesFragment : Fragment(R.layout.fragment_rv_devices) {
         devicesAdapter = DevicesAdapter(devices) { pos ->
             Log.d("NM", pos.toString())
             val action =
-                    RVDevicesFragmentDirections.actionRvDevicesFragmentToDeviceDetailsFragment2(
+                    RVDevicesFragmentDirections.actionRvDevicesFragmentToContainterDetailsFragment(
                             deviceName = devices[pos].name,
                             description = devices[pos].description
                     )

@@ -85,6 +85,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 val sendIntent = Intent(context, SecondActivity::class.java)
                 sendIntent.putExtra(Intent.EXTRA_TEXT, validUser!!.name)
                 startActivity(sendIntent)
+                requireActivity().finish()
             }
         }
     }

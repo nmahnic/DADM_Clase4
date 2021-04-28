@@ -13,21 +13,20 @@ class DeviceDetailsFragment : Fragment(R.layout.fragment_device_details) {
 
     private lateinit var binding: FragmentDeviceDetailsBinding
     private lateinit var v: View
-    private val args: DeviceDetailsFragmentArgs by navArgs()
+//    private val args: DeviceDetailsFragmentArgs by navArgs()
 
     override fun onViewCreated (view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentDeviceDetailsBinding.bind(view)
 
-        v = view
+//        val serviceName = args.deviceName
+//        val description = args.description
 
-        val serviceName = args.deviceName
-        val description = args.description
+        binding.txtServiceTitle.text = "serviceName"
+        binding.txtDescription.text = "description"
 
-        binding.txtServiceTitle.text = serviceName
-        binding.txtDescription.text = description
-
-        Log.d("NM","HOLA ${SecondActivity.User.name} $serviceName ,$description")
+//        Log.d("NM","HOLA ${SecondActivity.User.name} $serviceName ,$description")
+        Log.d("NM","HOLA ${SecondActivity.User.name}")
     }
 
 }

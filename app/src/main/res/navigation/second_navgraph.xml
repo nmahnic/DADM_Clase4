@@ -11,8 +11,8 @@
         android:label="fragment_device_rv"
         tools:layout="@layout/fragment_rv_devices">
         <action
-            android:id="@+id/action_rvDevicesFragment_to_deviceDetailsFragment2"
-            app:destination="@id/deviceDetailsFragment" />
+            android:id="@+id/action_rvDevicesFragment_to_containterDetailsFragment"
+            app:destination="@id/containterDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/deviceDetailsFragment"
@@ -22,6 +22,23 @@
         <argument android:name="deviceName"
             app:argType="string" />
         <argument android:name="description"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/deviceOptionsFragment"
+        android:name="com.nicomahnic.dadm.clase4.fragments.secondActivityFragments.DeviceOptionsFragment"
+        android:label="fragment_device_options"
+        tools:layout="@layout/fragment_device_options" />
+    <fragment
+        android:id="@+id/containterDetailsFragment"
+        android:name="com.nicomahnic.dadm.clase4.fragments.secondActivityFragments.ContainterDetailsFragment"
+        android:label="fragment_containter_details"
+        tools:layout="@layout/fragment_containter_details" >
+        <argument
+            android:name="deviceName"
+            app:argType="string" />
+        <argument
+            android:name="description"
             app:argType="string" />
     </fragment>
 </navigation>
