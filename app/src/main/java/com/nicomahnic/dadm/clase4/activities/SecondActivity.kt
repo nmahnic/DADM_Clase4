@@ -9,10 +9,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.ui.*
 import com.nicomahnic.dadm.clase4.R
 import kotlinx.android.synthetic.main.activity_second.*
 
@@ -35,24 +32,16 @@ class SecondActivity : AppCompatActivity() {
         }
 
         Log.d("NM", "ARGS: ${userName}")
-        //supportActionBar?.title = userName
-
-//        navController = Navigation.findNavController(this,R.id.navHostFragment)
-//        navView.setupWithNavController(navController)
-//        NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
 
         navController = findNavController(R.id.navHostFragment)
-        appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.deviceDetailsFragment,R.id.deviceOptionsFragment,R.id.registerDevicesFragment),
-            drawerLayout
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
+
 
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+        return NavigationUI.navigateUp(navController, drawerLayout)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
